@@ -1,0 +1,250 @@
+body{
+
+    margin: 0px 0px;
+    background-color: #36476b;
+}
+
+
+@keyframes fall {
+    0%{background-position-y: 200vh;}
+    25%{background-position-y: 200vh;}
+  
+    100%{background-position:76% center}
+    
+}
+/*背景*/
+.bg{
+    height: 100vh;
+    width: 100vw;
+    
+    background-size: cover;
+    background-position: 76% center;
+    background-image: url(../img/背景宽.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+     animation: fall;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;  
+
+}
+.bg::before{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.696);
+    z-index: 0;
+    animation: occur 4.3s ease-in-out 0s 1 normal;
+}
+@keyframes occur {
+    0%{
+        opacity: 0;
+    }
+   80%{
+         opacity: 0;
+   }
+    100%{
+        opacity: 100;
+    }
+    
+}
+.total{
+   position:absolute;
+   height: 100vh;
+    width: 100vw;
+    z-index: 200;
+    background-color: #00000000;
+}
+
+/*人物动画*/
+
+.me{
+    
+    /* margin-top: -45vh; */
+    margin-top: -45vh;;
+    margin-right: 23%;
+    height:120vh;
+    float: right;
+    
+    
+    /* animation: shake 15s ease-in-out 1s infinite normal; */
+      animation: fallMe,shake;
+    animation-duration: 3.7s,15s;
+    animation-timing-function: ease-in-out,ease-in-out;
+    animation-iteration-count: 1,infinite;
+    animation-direction: normal;
+    animation-delay: 0s,0s;
+    z-index: 2000;  
+    transition: 0.6s;
+}
+@keyframes fallMe {
+    0%{
+        margin-top: -70vh;
+    }
+    70%{
+        margin-top: -35vh;
+    }
+    100%{
+        margin-top: -45vh;
+    }
+}
+@keyframes shake {
+
+        0% { transform: translate(0px, 0px); }
+        10% { transform: translate(-7px, 7px); }
+        20% { transform: translate(-7px, -7px); }
+        30% { transform: translate(7px, 7px); }
+        40% { transform: translate(7px, -7px); }
+        50% { transform: translate(-7px, 7px); }
+        60% { transform: translate(-6px, -6px); }
+        70% { transform: translate(6px, 6px); }
+        80% { transform: translate(7px, -7px); }
+        90% { transform: translate(-7px, 6px); }
+        100% { transform: translate(0px, 0px); }
+      
+}
+.observe{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.6s;
+    z-index: -2000;
+    animation: observe 5s linear 0s 1 normal;
+    
+}
+@keyframes observe {
+    0%{
+        display: none;
+
+    }
+    99%{display: none;}
+    100%{display: block;}
+    
+
+}
+.me:hover+.observe{
+    background-color: rgba(0, 0, 0, 0.841);
+
+}
+.me:hover{
+    height:130vh;
+}
+
+/*ring动画*/
+.ring{
+    margin: 0 0;
+    position: absolute;
+    
+    right: 23%;
+    top: 18vh;
+    /* top: 33vh; */
+    
+    background-color: rgba(0, 0, 0, 0);
+    height: 65vh;
+    width: 65vh;
+
+    z-index: -1;
+    animation: occur 6s ease 0s 1 normal ;
+    
+}
+/* .ring::before{
+content: "";
+display: block;
+border-radius: 50%;
+width: 100%;
+height: 100%;
+margin-left: 10vw;
+filter: blur(80px);
+} */
+#ring1{
+    position: absolute;
+    height: 100%;
+    left: 25.5%;
+    animation: ring1 2s ease-in-out 0s infinite alternate ;
+    
+}
+@keyframes ring1 {
+    0%{
+        transform: rotate(80deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+
+}
+#ring2{
+    position: absolute;
+    height: 86%;
+    top:7%;
+    left: 33.5%;
+    animation: ring2 60s linear 0s infinite normal ;
+}
+@keyframes ring2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+#ring3{
+    position:absolute;
+    height: 105%;
+    /* left: -1.5%; */
+    left: 22%;
+    top: -2%;
+}
+
+/*nav动画*/
+.nav{
+    
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgba(162, 119, 55, 0.573); */
+   display: flex;
+   flex-direction:row;
+   animation: occur 6s ease-in 0s 1 normal; 
+}
+
+.nav #pageTittle{
+    display: flex;
+
+    height: 70vh;
+    width: 50vw;
+    margin-top: 4%;
+    align-items: center;
+   /* background-color: black; */
+   
+
+   
+    
+
+}
+.nav .navBox{
+    position: relative;
+    background-color: azure;
+    height: 70vh;
+    width: 20px;    
+    top: 20vh;
+    margin-top: -10vh;
+    margin-left: 8%;
+    margin-right: 3%;
+    box-shadow: -10px 0px 30px azure;
+
+}
+#pageTittle h1{
+    font-family:sans-serif;    
+
+    margin: 0 0;
+    font-size: 15vh;
+    /* font-size: 18em; */
+    color: azure;
+    /* text-shadow: -10px 2px 2px rgba(240, 255, 255, 0.586); */
+    
+}
