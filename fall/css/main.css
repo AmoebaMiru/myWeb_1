@@ -289,9 +289,12 @@ filter: blur(80px);
     position: relative;
     height: 30vw;
     width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .player .icon-changpianCD{
- position: absolute;
+ position: relative;
 
 
 
