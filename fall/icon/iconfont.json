@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2166935",
+      "name": "唱片CD",
+      "font_class": "changpianCD",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    },
+    {
+      "icon_id": "11759923",
+      "name": "唱片",
+      "font_class": "changpian",
+      "unicode": "e7b4",
+      "unicode_decimal": 59316
+    },
+    {
+      "icon_id": "17722033",
+      "name": "唱片",
+      "font_class": "weibiaoti-8_huaban1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "38176508",
+      "name": "曲棍球_hockey",
+      "font_class": "qugunqiu_hockey",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    }
+  ]
+}
