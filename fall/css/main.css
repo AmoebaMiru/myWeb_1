@@ -55,7 +55,7 @@ body{
    position:absolute;
    height: 100vh;
     width: 100vw;
-    z-index: 200;
+    z-index: 2000;
     background-color: #00000000;
 }
 
@@ -106,32 +106,32 @@ body{
         100% { transform: translate(0px, 0px); }
       
 }
+
+.me:hover{
+    height:130vh;
+}
 .observe{
-    position: relative;
+   
+    position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: 0.6s;
+    opacity: 0;
+    transition: 0.5s;
     z-index: -2000;
-    animation: observe 5s linear 0s 1 normal;
-    
+    /* animation: observe 5s linear 0s 1 normal; */
+
 }
 @keyframes observe {
-    0%{
-        display: none;
-
-    }
+    0%{display: none;}
     99%{display: none;}
     100%{display: block;}
     
-
 }
-.me:hover+.observe{
-    background-color: rgba(0, 0, 0, 0.841);
+.yuan:hover+.observe{
+    
+    opacity: 100;
+    background-color: rgba(0, 0, 0, 0.847);
 
-}
-.me:hover{
-    height:130vh;
 }
 
 /*ring动画*/
@@ -209,7 +209,8 @@ filter: blur(80px);
     /* background-color: rgba(162, 119, 55, 0.573); */
    display: flex;
    flex-direction:row;
-   animation: occur 6s ease-in 0s 1 normal; 
+   /* animation: occur 6s ease-in 0s 1 normal;  */
+   z-index: 200;
 }
 
 .nav #pageTittle{
@@ -226,7 +227,8 @@ filter: blur(80px);
     
 
 }
-.nav .navBox{
+
+.nav .line{
     position: relative;
     background-color: azure;
     height: 70vh;
@@ -238,6 +240,7 @@ filter: blur(80px);
     box-shadow: -10px 0px 30px azure;
 
 }
+
 #pageTittle h1{
     font-family:sans-serif;    
 
@@ -248,3 +251,75 @@ filter: blur(80px);
     /* text-shadow: -10px 2px 2px rgba(240, 255, 255, 0.586); */
     
 }
+
+/*navDec*/
+.navBox{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.638);
+    height: 100vh;
+    width: 15vw;
+    z-index: 1500;
+    transition: 0.5S;
+    opacity: 0;
+    
+}
+
+.navBox:hover{
+
+    background:linear-gradient(TO right,rgba(255, 255, 255, 0.705) 5%, rgba(255, 255, 255, 0.322) ,rgba(255, 255, 255, 0));
+    width: 40vw;
+    opacity: 100;
+}
+.navBox:hover+.observe{
+    opacity: 100;
+    background-color: rgba(0, 0, 0, 0.847);
+}
+
+/*唱片*/
+.musicBox{
+    
+    height: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.player{
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+}
+.player .icon-changpianCD{
+ position: absolute;
+
+
+
+ font-size: 30vw;
+ color: #182542e5;
+ animation: ring2 60s linear 0s infinite normal ;
+
+}
+
+.corderBox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15%;
+    background-color: #7281a2b7;
+    z-index: -1;
+}
+
+.player .icon-bofang{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;;
+    transform: translate(-45%,-50%);
+    color: #141f37e5;
+    font-size: 5vw;
+}
+
+
